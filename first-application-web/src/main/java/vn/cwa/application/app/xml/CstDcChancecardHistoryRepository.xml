@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.nttdata.iba_cms.domain.repository.cst_dc.CstDcChancecardHistoryRepository">
+
+	<resultMap id="CstDcChancecardHistoryResultMap"
+		type="com.nttdata.iba_cms.domain.model.CstDcCustHistory">
+		<id column="chancecard_id" property="chancecardId" />
+		<result column="cust_id" property="custId" />
+		<result column="input_src" property="inputSrc" />
+		<result column="inq_ver" property="inqVer" />
+		<result column="pattern_no" property="patternNo" />
+		<result column="mc_code" property="mcCode" />
+		<result column="tenpo_code" property="tenpoCode" />
+		<result column="receipt_date" property="receiptDate" />
+		<result column="name_l_kana" property="namelKana" />
+		<result column="name_f_kana" property="nameFKana" />
+		<result column="name_l" property="nameL" />
+		<result column="name_f" property="nameF" />
+		<result column="sex" property="sex" />
+		<result column="birth_yyyy" property="birthYyyy" />
+		<result column="birth_mm" property="birthMm" />
+		<result column="birth_dd" property="birthDd" />
+		<result column="zip" property="zip" />
+		<result column="addr1" property="addr1" />
+		<result column="addr2" property="addr2" />
+		<result column="addr3" property="addr3" />
+		<result column="tel1" property="tel1" />
+		<result column="tel2" property="tel2" />
+		<result column="tel3" property="tel3" />
+		<result column="mail_address" property="mailAddress" />
+		<result column="spouse" property="spouse" />
+		<result column="child" property="child" />
+		<result column="info_fuyo" property="infoFuyo" />
+		<result column="raiten_yyyy" property="raitenYyyy" />
+		<result column="raiten_mm" property="raitenMm" />
+		<result column="raiten_dd" property="raitenDd" />
+		<result column="sijyo" property="sijyo" />
+		<result column="mitsumori" property="mitsumori" />
+		<result column="ca_code" property="caCode" />
+		<result column="dm_stop" property="dmStop" />
+		<result column="purpose1" property="purpose1" />
+		<result column="purpose2" property="purpose2" />
+		<result column="purpose3" property="purpose3" />
+		<result column="purpose4" property="purpose4" />
+		<result column="purpose5" property="purpose5" />
+		<result column="purpose6" property="purpose6" />
+		<result column="purpose_free" property="purposeFree" />
+		<result column="chance1" property="chance1" />
+		<result column="chance2" property="chance2" />
+		<result column="chance3" property="chance3" />
+		<result column="chance4" property="chance4" />
+		<result column="chance5" property="chance5" />
+		<result column="chance6" property="chance6" />
+		<result column="chance7" property="chance7" />
+		<result column="chance8" property="chance8" />
+		<result column="chance9" property="chance9" />
+		<result column="chance10" property="chance10" />
+		<result column="chance11" property="chance11" />
+		<result column="chance12" property="chance12" />
+		<result column="chance13" property="chance13" />
+		<result column="chance14" property="chance14" />
+		<result column="chance15" property="chance15" />
+		<result column="chance16" property="chance16" />
+		<result column="chance_free" property="chanceFree" />
+		<result column="kibo1" property="kibo1" />
+		<result column="kibo2" property="kibo2" />
+		<result column="kibo3" property="kibo3" />
+		<result column="purchase_free" property="purchaseFree" />
+		<result column="purchase1" property="purchase1" />
+		<result column="purchase2" property="purchase2" />
+		<result column="purchase3" property="purchase3" />
+		<result column="purchase4" property="purchase4" />
+		<result column="purchase5" property="purchase5" />
+		<result column="car_free" property="carFree" />
+		<result column="car_maker1" property="carMaker1" />
+		<result column="car_maker2" property="carMaker2" />
+		<result column="car_maker3" property="carMaker3" />
+		<result column="car_maker4" property="carMaker4" />
+		<result column="car_maker5" property="carMaker5" />
+		<result column="car_maker6" property="carMaker6" />
+		<result column="car_maker_free" property="carMakerFree" />
+		<result column="syaken_y" property="syakenY" />
+		<result column="syaken_m" property="syakenM" />
+		<result column="nensiki" property="nensiki" />
+		<result column="free_answer" property="freeAnswer" />
+		<result column="reg_date" property="regDate" />
+		<result column="yobi1" property="yobi1" />
+		<result column="yobi2" property="yobi2" />
+		<result column="yobi3" property="yobi3" />
+		<result column="yobi4" property="yobi4" />
+		<result column="yobi5" property="yobi5" />
+		<result column="yobi6" property="yobi6" />
+		<result column="yobi7" property="yobi7" />
+		<result column="yobi8" property="yobi8" />
+		<result column="yobi9" property="yobi9" />
+		<result column="yobi10" property="yobi10" />
+		<result column="yobi11" property="yobi11" />
+		<result column="yobi12" property="yobi12" />
+		<result column="yobi13" property="yobi13" />
+		<result column="yobi14" property="yobi14" />
+		<result column="yobi15" property="yobi15" />
+		<result column="yobi16" property="yobi16" />
+		<result column="yobi17" property="yobi17" />
+		<result column="yobi18" property="yobi18" />
+		<result column="yobi19" property="yobi19" />
+		<result column="yobi20" property="yobi20" />
+	</resultMap>
+
+</mapper>

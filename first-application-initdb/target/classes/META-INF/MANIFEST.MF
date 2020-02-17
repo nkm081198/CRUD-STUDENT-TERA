@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: Admin
+Build-Jdk: 11.0.4
+Implementation-Title: first-application-initdb
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: vn.cwa.application
+Implementation-Vendor: TERASOLUNA Framework Team
+Created-By: Maven Integration for Eclipse
+

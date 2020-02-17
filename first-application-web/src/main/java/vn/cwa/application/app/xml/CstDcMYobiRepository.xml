@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.nttdata.iba_cms.domain.repository.cst_dc.CstDcMYobiRepository">
+
+	<resultMap id="CstDcMYobiResultMap"
+		type="com.nttdata.iba_cms.domain.model.CstDcMYobi">
+		<id column="id" property="id" />
+		<result column="type" property="type" />
+		<result column="table" property="table" />
+		<result column="master_table" property="masterTable" />
+		<result column="pattern_no" property="patternNo" />
+		<result column="code_column" property="codeColumn" />
+		<result column="label_column" property="labelColumn" />
+	</resultMap>
+
+</mapper>

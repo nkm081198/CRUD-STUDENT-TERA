@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="vn.cwa.application.domain.repository.student.StudentRepository">
+
+	<resultMap id="studentResultMap" type="Student">
+		<id column="id" property="idT" />
+		<result column="name" property="name" />
+		<result column="age" property="age" />
+		<result column="dateofbirth" property="dateOfBirth" />
+	</resultMap>
+
+	<!-- <resultMap id="studentSubjectResultMap" type="StudentSubject"> <id 
+		column="id" property="idT" /> <result column="name" property="name" /> <result 
+		column="age" property="age" /> <result column="dateofbirth" property="dateOfBirth" 
+		/> </resultMap> -->
+
+	<select id="findById" parameterType="long"
+		resultMap="studentResultMap">
+		SELECT * FROM student WHERE id = #{id}
+	</select>
+
+	<select id="findAll" resultMap="studentResultMap">
+		SELECT * FROM student;
+	</select>
+
+	<!-- <insert id="insert" parameterType="Student" useGeneratedKeys="true" 
+		keyProperty="id" keyColumn="id"> INSERT INTO student(name,age,dateofbirth) 
+		VALUES (#{name}, #{age}, #{dateOfBirth}) </insert> -->
+
+	<!-- <select id="insert" resultType="Integer"> INSERT INTO student(name,age,dateofbirth) 
+		VALUES (#{name}, #{age}, #{dateOfBirth}) RETURNING id </select> -->
+
+	<!-- <insert id="insert" parameterType="Student" useGeneratedKeys="true" 
+		keyProperty="idT" keyColumn="id"> INSERT INTO student( name, age, dateofbirth 
+		) VALUES( #{name}, #{age}, #{dateOfBirth} ) </insert> -->
+
+	<insert id="insert">
+
+		INSERT INTO student(
+		name,
+		age,
+		dateofbirth
+		)
+		VALUES(
+		#{name},
+		#{age},
+		#{dateOfBirth}
+		)
+		<selectKey resultType="Long" order="AFTER" keyProperty="idT">
+			SELECT LAST_INSERT_ID() as idT
+		</selectKey>
+
+	</insert>
+
+
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM student WHERE
+		id = #{id}
+	</delete>
+
+	<update id="update" parameterType="Student">
+		UPDATE
+		student
+		SET
+		name =
+		#{name},
+		age = #{age},
+		dateofbirth = #{dateOfBirth}
+		WHERE
+		id = #{id}
+	</update>
+
+	<select id="getTest" resultType="Student">
+		SELECT
+		*
+		FROM
+		<choose>
+			<when
+				test="tableName != null and tableName !=''">
+				${tableName}
+			</when>
+		</choose>
+		WHERE
+		1=1
+	</select>
+	
+	<select id="getIdByName" resultType="Long">
+		SELECT id FROM student where name = #{name}
+	</select>
+
+</mapper>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="vn.cwa.application.domain.repository.sample.SampleRepository">
+
+<!--
+
+    <resultMap id="todoResultMap" type="Todo">
+        <id property="todoId" column="todo_id" />
+        <result property="todoTitle" column="todo_title" />
+        <result property="finished" column="finished" />
+        <result property="createdAt" column="created_at" />
+    </resultMap>
+
+    <select id="findOne" parameterType="string" resultMap="todoResultMap">
+    <![CDATA[
+        SELECT
+            todo_id, 
+            todo_title, 
+            finished, 
+            created_at 
+        FROM
+            todo 
+        WHERE
+            todo_id = #{todoId}
+    ]]>
+    </select>
+
+    <select id="findAll" resultMap="todoResultMap">
+    <![CDATA[
+        SELECT
+            todo_id, 
+            todo_title, 
+            finished, 
+            created_at 
+        FROM
+            todo 
+    ]]>
+    </select>
+
+    <insert id="create" parameterType="Todo">
+    <![CDATA[
+        INSERT INTO todo
+        (
+            todo_id, 
+            todo_title, 
+            finished, 
+            created_at
+        ) 
+        VALUES
+        (
+            #{todoId}, 
+            #{todoTitle}, 
+            #{finished}, 
+            #{createdAt}
+        )
+    ]]>
+    </insert>
+
+    <update id="update" parameterType="Todo">
+    <![CDATA[
+        UPDATE
+            todo 
+        SET
+            todo_title = #{todoTitle}, 
+            finished = #{finished}, 
+            created_at = #{createdAt} 
+        WHERE
+            todo_id = #{todoId}
+    ]]>
+    </update>
+
+    <delete id="delete" parameterType="Todo">
+    <![CDATA[
+        DELETE FROM todo 
+        WHERE
+            todo_id = #{todoId}
+    ]]>
+    </delete>
+
+    <select id="countByFinished" parameterType="boolean" resultType="long">
+    <![CDATA[
+        SELECT
+            COUNT(*)
+        FROM
+            todo 
+        WHERE
+            finished = #{finished}
+    ]]>
+    </select>
+
+    <select id="exists" parameterType="string" resultType="long">
+    <![CDATA[
+        SELECT
+            COUNT(*)
+        FROM
+            todo 
+        WHERE
+            todo_id = #{todoId}
+    ]]>
+    </select>
+
+-->
+
+<insert id="">
+	INSERT INTO 
+	CST_DC_ANSWER_HISTORY_MAP_LMS
+	(
+	GROUP_ID,
+	GROUP_NAME,
+	FORM_ID,
+	FORM_NAME,
+	ANSWER_ID,
+	cust_id,
+	mail_addr1,
+	cp_date,
+	cp_name_l,
+	cp_name_f,
+	cp_kana_l,
+	cp_kana_f,
+	cp_sex,
+	cp_birthday,
+	cp_ken_id,
+	cp_ken,
+	cp_addr2,
+	cp_addr3,
+	cp_zip_code,
+	cp_tel,
+	cp_tel2,
+	cp_car_flg,
+	cp_maker_cd,
+	cp_maker_nm,
+	cp_car_cd,
+	cp_car_nm,
+	cp_syonendo,
+	cp_syonendo_y,
+	cp_syonendo_m,
+	optin_flg21,
+	html_flg21,
+	optin_flg1,
+	html_flg1
+	)
+	VALUES
+	(
+	
+	)
+	
+	
+</insert>
+
+</mapper>
