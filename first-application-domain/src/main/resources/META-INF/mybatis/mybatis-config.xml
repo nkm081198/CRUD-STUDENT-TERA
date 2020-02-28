@@ -16,11 +16,6 @@
 	<typeAliases>
 		<package name="vn.cwa.application.domain.model" />
 		<package name="vn.cwa.application.domain.repository" />
-		<!-- <package name="vn.cwa.application.infra.mybatis.typehandler" /> -->
 	</typeAliases>
-
-	<typeHandlers>
-		<!-- <package name="vn.cwa.application.infra.mybatis.typehandler" /> -->
-	</typeHandlers>
 
 </configuration>

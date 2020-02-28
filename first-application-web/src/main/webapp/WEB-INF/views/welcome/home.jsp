@@ -8,8 +8,8 @@
 			<button name="form" style="width: 50px; height: 50px">insert</button>
 		</div>
 	</form:form>
-	
-	
+
+
 	<table style="width: 100%">
 		<tr>
 			<th>ID</th>
@@ -25,17 +25,13 @@
 				<td><c:out value="${student.name}"></c:out></td>
 				<td><c:out value="${student.age}"></c:out></td>
 				<td><c:out value="${student.dateOfBirth}"></c:out></td>
-				<td>
-				<form:form method="get"
+				<td><form:form method="get"
 						action="${pageContext.request.contextPath}/student/get/${student.idT}">
 						<button id="btnEdit">Update</button>
-					</form:form>
-					
-					<form:form method="post"
+					</form:form> <form:form method="post"
 						action="${pageContext.request.contextPath}/student/delete/${student.idT}">
 						<button id="btnDelete">Delete</button>
-					</form:form>
-				</td>
+					</form:form></td>
 			</tr>
 		</c:forEach>
 	</table>

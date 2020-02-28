@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="">
+
+	<resultMap id="CstDcAnswerHistoryMapLmsResultMap"
+		type="CstDcAnswerHistoryMapLms">
+
+	</resultMap>
+
+	<insert id="insert" parameterType="CstDcAnswerHistoryMapLms"
+		useGeneratedKeys="true" keyProperty="xxx" keyColumn="xxx">
+		INSERT INTO
+		CST_DC_ANSWER_HISTORY_MAP_LMS
+		(
+		GROUP_ID,
+		GROUP_NAME,
+		FORM_ID,
+		FORM_NAME,
+		ANSWER_ID,
+		CUST_ID,
+		MAIL_ADDR1,
+		CP_DATE,
+		CP_NAME_L,
+		CP_NAME_F,
+		CP_KANA_L,
+		CP_KANA_F,
+		CP_SEX,
+		CP_BIRTHDAY,
+		CP_KEN_ID,
+		CP_KEN,
+		CP_ADDR2,
+		CP_ADDR3,
+		CP_ZIP_CODE,
+		CP_TEL,
+		CP_TEL2,
+		CP_CAR_FLG,
+		CP_MAKER_CD,
+		CP_MAKER_NM,
+		CP_CAR_CD,
+		CP_CAR_NM,
+		CP_SYONENDO,
+		CP_SYONENDO_Y,
+		CP_SYONENDO_M,
+		OPTIN_FLG21,
+		HTML_FLG21,
+		OPTIN_FLG1,
+		HTML_FLG1
+		)
+		VALUES
+		(
+		#{groupId},
+		#{groupName},
+		#{formId},
+		#{formName},
+		#{answerId},
+		#{custId},
+		#{mailAddr1},
+		#{cpDate},
+		#{cpNameL},
+		#{cpNameF},
+		#{cpKanaL},
+		#{cpKanaF},
+		#{cpSex},
+		#{cpBirthday},
+		#{cpKenId},
+		#{cpKen},
+		#{cpAddr2},
+		#{cpAddr3},
+		#{cpZipCode},
+		#{cpTel},
+		#{cpTel2},
+		#{cpCarFlg},
+		#{cpMakerCd},
+		#{cpMakerNm},
+		#{cpCarCd},
+		#{cpCarNm},
+		#{cpSyonendo},
+		#{cpSyonendoY},
+		#{cpSyonendoM},
+		#{optinFlg21},
+		#{htmlFlg21},
+		#{optinFlg1},
+		#{htmlFlg1}
+		)
+	</insert>
+
+</mapper>

@@ -265,8 +265,6 @@ public class Main {
 //		String rs = (x.length == 2) ? x[3] : null;
 //		System.out.println(rs);
 
-		String test = "cp_car_cd";
-		String rs = getPropertiesType(test);
 		
 		
 		
@@ -295,7 +293,27 @@ public class Main {
 //
 //	    System.out.println(count);
 		
+//		Calendar cal = Calendar.getInstance();
+//		cal.setTime(new Date());
+//		int year = cal.get(Calendar.YEAR);
+//		int month = cal.get(Calendar.MONTH);
+//		int day = cal.get(Calendar.DAY_OF_MONTH);
+//		
+//		String yStr = String.valueOf(year);
+//		String mStr = String.valueOf(month + 1);
+//		String dStr = String.valueOf(day);
+//		
+//		System.out.println(dStr + "-" + mStr + "-" + yStr);
 		
+//		Short shor = 11111;
+//	    Integer inte = shor.intValue();
+//	    
+//	    System.out.println(inte);
+		
+		Short s = null;
+		
+		String x = s.toString();
+		System.out.println(x);
 		
 		System.out.println("======= END =======");
 

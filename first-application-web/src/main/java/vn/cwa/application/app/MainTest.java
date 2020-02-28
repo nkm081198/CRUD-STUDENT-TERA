@@ -6,11 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class MainTest {
 
 	public static void main(String[] args) {
 		try {
-			File file = new File("C:\\customer.txt"); // creates a new file instance
+			File file = new File("C:\\answerMap.txt"); // creates a new file instance
 			FileReader fr = new FileReader(file); // reads the file
 			BufferedReader br = new BufferedReader(fr); // creates a buffering character input stream
 //			StringBuilder sb = new StringBuilder(); // constructs a string buffer with no characters
@@ -21,31 +23,53 @@ public class MainTest {
 //				sb.append("\n"); // line feed
 				lstStr.add(line);
 			}
-			fr.close(); // closes the stream and release the resources
-//			System.out.println("Contents of File: ");
-			String[] xxx = null;
-			List<String> columns = new ArrayList<String>();
-			List<String> properties = new ArrayList<String>();
+			fr.close(); 
+			
+			StringBuilder sql =new StringBuilder();
+			sql.append("INSERT INTO ").append("\n");
+			sql.append("CST_DC_ANSWER_HISTORY_MAP_LMS ").append("\n");
+			sql.append("(\n");
+			
+			for (String str : lstStr) {
+				sql.append(str.toUpperCase()).append(",\n");
+			}
+			
+			sql.append(")\n");
+			
+			sql.append("VALUES \n(\n");
+			
 			for (String item : lstStr) {
-				xxx = item.split("\"");
-				columns.add(xxx[1]);
-				properties.add(xxx[3]);
+				sql.append("#{").append(getPropertiesType(item)).append("},\n");
 			}
-
-			StringBuilder sql = new StringBuilder();
-			for (String item : properties) {
-				sql.append(item).append("\n");
-			}
-//			System.out.println(sql);
-			String temp = null;
-			for (int i = 0; i < properties.size() - 1; i++) {
-				temp = properties.get(i);
-				for (int j = i + 1; j < properties.size(); j++) {
-					if (temp.equals(properties.get(j))) {
-						System.out.println(properties.get(j));
-					}
-				}
-			}
+			
+			sql.append(")\n");
+			
+			System.out.println(sql.toString());
+			
+//			lstStr.stream().forEach(item -> System.out.println(getPropertiesType(item)));
+//			String[] xxx = null;
+//			List<String> columns = new ArrayList<String>();
+//			List<String> properties = new ArrayList<String>();
+//			for (String item : lstStr) {
+//				xxx = item.split("\"");
+//				columns.add(xxx[1]);
+//				properties.add(xxx[3]);
+//			}
+//
+//			StringBuilder sql = new StringBuilder();
+//			for (String item : properties) {
+//				sql.append(item).append("\n");
+//			}
+//
+//			String temp = null;
+//			for (int i = 0; i < properties.size() - 1; i++) {
+//				temp = properties.get(i);
+//				for (int j = i + 1; j < properties.size(); j++) {
+//					if (temp.equals(properties.get(j))) {
+//						System.out.println(properties.get(j));
+//					}
+//				}
+//			}
 
 //			StringBuilder sql = new StringBuilder();
 //			sql.append("INSERT INTO cst_dc_chancecard_history ( ").append("\n");
@@ -62,5 +86,16 @@ public class MainTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private static String getPropertiesType(String input) {
+		input = input.toLowerCase();
+		char[] xxx = input.toCharArray();
+		for (int i = 0; i < xxx.length; i++) {
+			if (xxx[i] == '_') {
+				xxx[i + 1] = Character.toUpperCase(xxx[i + 1]);
+			}
+		}
+		return String.valueOf(xxx).replace("_", "");
 	}
 }

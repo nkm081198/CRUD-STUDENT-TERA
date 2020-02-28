@@ -6,15 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class TestClass2 {
 
 	public static Connection getConnection() {
-		
+
 		try {
 			String databaseURL = "jdbc:postgresql://172.16.210.179/cms_back";
 			String user = "postgres";
@@ -26,12 +24,12 @@ public class TestClass2 {
 			System.out.println(e.getMessage());
 		}
 		return null;
-		
+
 	}
 
 	public static void main(String[] args) {
-//		generateModel("cst_dc_m_customer");
-		generateXML("cst_dc_m_customer");
+//		generateModel("cst_dc_answer_history_map_lms");
+		generateXML("cst_dc_answer_history_map_lms");
 	}
 
 	public static void generateModel(String tableName) {
@@ -58,19 +56,25 @@ public class TestClass2 {
 					type = "Short";
 				} else if (columnTypeName.equals("int4")) {
 					type = "Integer";
-				} else {
+				} else if (columnTypeName.equals("varchar")) {
 					type = "String";
+				} else if (columnTypeName.equals("int8")){
+					type = "Long";
+				}else {
+					type = "xxxxx";
 				}
 
-				System.out.println("private " + type + " " + getPropertiesType(label) + "\n");
+				System.out.println("private " + type + " " + getPropertiesType(label.toLowerCase()) + ";\n");
 			}
+			
+			System.out.println(typenames);
 			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
 		
 	}
-	
+
 	public static void generateXML(String tableName) {
 		try {
 			Connection connection = getConnection();
@@ -85,10 +89,11 @@ public class TestClass2 {
 			for (int i = 0; i < meta.getColumnCount(); i++) {
 				rsx = new StringBuilder();
 				label = meta.getColumnLabel(i + 1);
-				rsx.append("<result column=\"").append(label).append("\" property=\"").append(getPropertiesType(label)).append("\" />");
+				rsx.append("<result column=\"").append(label).append("\" property=\"")
+						.append(getPropertiesType(label.toLowerCase())).append("\" />");
 				System.out.println(rsx);
 			}
-			
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
