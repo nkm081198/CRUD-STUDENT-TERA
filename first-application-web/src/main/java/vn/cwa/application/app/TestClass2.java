@@ -14,9 +14,13 @@ public class TestClass2 {
 	public static Connection getConnection() {
 
 		try {
-			String databaseURL = "jdbc:postgresql://172.16.210.179/cms_back";
-			String user = "postgres";
-			String password = "nissancms@";
+//			String databaseURL = "jdbc:postgresql://172.16.210.179/cms_back";
+//			String user = "postgres";
+//			String password = "nissancms@";
+			
+			String databaseURL = "jdbc:postgresql://localhost:5432/manh_db";
+            String user = "postgres";
+            String password = "admin";
 
 			return DriverManager.getConnection(databaseURL, user, password);
 		} catch (SQLException e) {
@@ -28,8 +32,8 @@ public class TestClass2 {
 	}
 
 	public static void main(String[] args) {
-//		generateModel("cst_dc_answer_history_map_lms");
-		generateXML("cst_dc_answer_history_map_lms");
+		generateModel("campaign");
+//		generateXML("campaign");
 	}
 
 	public static void generateModel(String tableName) {
@@ -61,7 +65,7 @@ public class TestClass2 {
 				} else if (columnTypeName.equals("int8")){
 					type = "Long";
 				}else {
-					type = "xxxxx";
+					type = "xxxxxxxxxx";
 				}
 
 				System.out.println("private " + type + " " + getPropertiesType(label.toLowerCase()) + ";\n");

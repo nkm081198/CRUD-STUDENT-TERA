@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="vn.cwa.application.domain.repository.applicant_campaign.CampaignRepository">
+
+	<resultMap id="CampaignResultMap" type="Campaign">
+		<id column="id" property="id" />
+		<result column="campaign_no" property="campaignNo" />
+		<result column="url" property="url" />
+		<result column="name" property="name" />
+		<result column="status" property="status" />
+		<result column="start_date" property="startDate" />
+		<result column="end_date" property="endDate" />
+		<result column="label1_flg" property="label1Flg" />
+		<result column="label1_name" property="label1Name" />
+		<result column="label1_value" property="label1Value" />
+		<result column="label2_flg" property="label2Flg" />
+		<result column="label2_name" property="label2Name" />
+		<result column="label2_value" property="label2Value" />
+		<result column="label3_flg" property="label3Flg" />
+		<result column="label3_name" property="label3Name" />
+		<result column="label3_value" property="label3Value" />
+		<result column="label4_flg" property="label4Flg" />
+		<result column="label4_name" property="label4Name" />
+		<result column="label4_value" property="label4Value" />
+		<result column="label5_flg" property="label5Flg" />
+		<result column="label5_name" property="label5Name" />
+		<result column="label5_value" property="label5Value" />
+		<result column="label6_flg" property="label6Flg" />
+		<result column="label6_name" property="label6Name" />
+		<result column="label6_value" property="label6Value" />
+		<result column="label7_flg" property="label7Flg" />
+		<result column="label7_name" property="label7Name" />
+		<result column="label7_value" property="label7Value" />
+		<result column="label8_flg" property="label8Flg" />
+		<result column="label8_name" property="label8Name" />
+		<result column="label8_value" property="label8Value" />
+		<result column="label9_flg" property="label9Flg" />
+		<result column="label9_name" property="label9Name" />
+		<result column="label9_value" property="label9Value" />
+		<result column="label10_flg" property="label10Flg" />
+		<result column="label10_name" property="label10Name" />
+		<result column="label10_value" property="label10Value" />
+		<result column="label11_flg" property="label11Flg" />
+		<result column="label11_name" property="label11Name" />
+		<result column="label11_value" property="label11Value" />
+		<result column="label12_flg" property="label12Flg" />
+		<result column="label12_name" property="label12Name" />
+		<result column="label12_value" property="label12Value" />
+		<result column="label13_flg" property="label13Flg" />
+		<result column="label13_name" property="label13Name" />
+		<result column="label13_value" property="label13Value" />
+		<result column="label14_flg" property="label14Flg" />
+		<result column="label14_name" property="label14Name" />
+		<result column="label14_value" property="label14Value" />
+		<result column="label15_flg" property="label15Flg" />
+		<result column="label15_name" property="label15Name" />
+		<result column="label15_value" property="label15Value" />
+		<result column="label16_flg" property="label16Flg" />
+		<result column="label16_name" property="label16Name" />
+		<result column="label16_value" property="label16Value" />
+		<result column="label17_flg" property="label17Flg" />
+		<result column="label17_name" property="label17Name" />
+		<result column="label17_value" property="label17Value" />
+		<result column="label18_flg" property="label18Flg" />
+		<result column="label18_name" property="label18Name" />
+		<result column="label18_value" property="label18Value" />
+		<result column="label19_flg" property="label19Flg" />
+		<result column="label19_name" property="label19Name" />
+		<result column="label19_value" property="label19Value" />
+		<result column="label20_flg" property="label20Flg" />
+		<result column="label20_name" property="label20Name" />
+		<result column="label20_value" property="label20Value" />
+		<result column="label21_flg" property="label21Flg" />
+		<result column="label21_name" property="label21Name" />
+		<result column="label21_value" property="label21Value" />
+		<result column="label22_flg" property="label22Flg" />
+		<result column="label22_name" property="label22Name" />
+		<result column="label22_value" property="label22Value" />
+		<result column="label23_flg" property="label23Flg" />
+		<result column="label23_name" property="label23Name" />
+		<result column="label23_value" property="label23Value" />
+		<result column="label24_flg" property="label24Flg" />
+		<result column="label24_name" property="label24Name" />
+		<result column="label24_value" property="label24Value" />
+		<result column="label25_flg" property="label25Flg" />
+		<result column="label25_name" property="label25Name" />
+		<result column="label25_value" property="label25Value" />
+		<result column="label26_flg" property="label26Flg" />
+		<result column="label26_name" property="label26Name" />
+		<result column="label26_value" property="label26Value" />
+		<result column="label27_flg" property="label27Flg" />
+		<result column="label27_name" property="label27Name" />
+		<result column="label27_value" property="label27Value" />
+		<result column="label28_flg" property="label28Flg" />
+		<result column="label28_name" property="label28Name" />
+		<result column="label28_value" property="label28Value" />
+		<result column="label29_flg" property="label29Flg" />
+		<result column="label29_name" property="label29Name" />
+		<result column="label29_value" property="label29Value" />
+		<result column="label30_flg" property="label30Flg" />
+		<result column="label30_name" property="label30Name" />
+		<result column="label30_value" property="label30Value" />
+		<result column="label31_flg" property="label31Flg" />
+		<result column="label31_name" property="label31Name" />
+		<result column="label31_value" property="label31Value" />
+		<result column="label32_flg" property="label32Flg" />
+		<result column="label32_name" property="label32Name" />
+		<result column="label32_value" property="label32Value" />
+		<result column="label33_flg" property="label33Flg" />
+		<result column="label33_name" property="label33Name" />
+		<result column="label33_value" property="label33Value" />
+		<result column="label34_flg" property="label34Flg" />
+		<result column="label34_name" property="label34Name" />
+		<result column="label34_value" property="label34Value" />
+		<result column="label35_flg" property="label35Flg" />
+		<result column="label35_name" property="label35Name" />
+		<result column="label35_value" property="label35Value" />
+		<result column="label36_flg" property="label36Flg" />
+		<result column="label36_name" property="label36Name" />
+		<result column="label36_value" property="label36Value" />
+		<result column="label37_flg" property="label37Flg" />
+		<result column="label37_name" property="label37Name" />
+		<result column="label37_value" property="label37Value" />
+		<result column="label38_flg" property="label38Flg" />
+		<result column="label38_name" property="label38Name" />
+		<result column="label38_value" property="label38Value" />
+		<result column="label39_flg" property="label39Flg" />
+		<result column="label39_name" property="label39Name" />
+		<result column="label39_value" property="label39Value" />
+		<result column="label40_flg" property="label40Flg" />
+		<result column="label40_name" property="label40Name" />
+		<result column="label40_value" property="label40Value" />
+		<result column="label41_flg" property="label41Flg" />
+		<result column="label41_name" property="label41Name" />
+		<result column="label41_value" property="label41Value" />
+		<result column="label42_flg" property="label42Flg" />
+		<result column="label42_name" property="label42Name" />
+		<result column="label42_value" property="label42Value" />
+		<result column="label43_flg" property="label43Flg" />
+		<result column="label43_name" property="label43Name" />
+		<result column="label43_value" property="label43Value" />
+		<result column="label44_flg" property="label44Flg" />
+		<result column="label44_name" property="label44Name" />
+		<result column="label44_value" property="label44Value" />
+		<result column="label45_flg" property="label45Flg" />
+		<result column="label45_name" property="label45Name" />
+		<result column="label45_value" property="label45Value" />
+		<result column="label46_flg" property="label46Flg" />
+		<result column="label46_name" property="label46Name" />
+		<result column="label46_value" property="label46Value" />
+		<result column="label47_flg" property="label47Flg" />
+		<result column="label47_name" property="label47Name" />
+		<result column="label47_value" property="label47Value" />
+		<result column="label48_flg" property="label48Flg" />
+		<result column="label48_name" property="label48Name" />
+		<result column="label48_value" property="label48Value" />
+		<result column="label49_flg" property="label49Flg" />
+		<result column="label49_name" property="label49Name" />
+		<result column="label49_value" property="label49Value" />
+		<result column="label50_flg" property="label50Flg" />
+		<result column="label50_name" property="label50Name" />
+		<result column="label50_value" property="label50Value" />
+	</resultMap>
+	
+	<select id="findById" parameterType="String"
+		resultMap="CampaignResultMap">
+		SELECT
+		*
+		FROM
+		campaign
+		WHERE
+		id = #{id}
+	</select>
+	
+</mapper>

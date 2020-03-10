@@ -12,7 +12,7 @@ public class MainTest {
 
 	public static void main(String[] args) {
 		try {
-			File file = new File("C:\\answerMap.txt"); // creates a new file instance
+			File file = new File("C:\\athuan.txt"); // creates a new file instance
 			FileReader fr = new FileReader(file); // reads the file
 			BufferedReader br = new BufferedReader(fr); // creates a buffering character input stream
 //			StringBuilder sb = new StringBuilder(); // constructs a string buffer with no characters
@@ -25,26 +25,14 @@ public class MainTest {
 			}
 			fr.close(); 
 			
-			StringBuilder sql =new StringBuilder();
-			sql.append("INSERT INTO ").append("\n");
-			sql.append("CST_DC_ANSWER_HISTORY_MAP_LMS ").append("\n");
-			sql.append("(\n");
-			
+			String[] xxx;
+			StringBuilder rs = new StringBuilder();
 			for (String str : lstStr) {
-				sql.append(str.toUpperCase()).append(",\n");
+				xxx = str.split("\"");
+				rs.append("\"").append(getPropertiesType(xxx[1])).append("\",");
 			}
 			
-			sql.append(")\n");
-			
-			sql.append("VALUES \n(\n");
-			
-			for (String item : lstStr) {
-				sql.append("#{").append(getPropertiesType(item)).append("},\n");
-			}
-			
-			sql.append(")\n");
-			
-			System.out.println(sql.toString());
+			System.out.println(rs.toString());
 			
 //			lstStr.stream().forEach(item -> System.out.println(getPropertiesType(item)));
 //			String[] xxx = null;

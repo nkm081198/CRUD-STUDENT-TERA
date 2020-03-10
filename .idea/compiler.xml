@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="first-application-env" />
+        <module name="first-application-selenium" />
+        <module name="first-application-web" />
+        <module name="first-application-domain" />
+        <module name="first-application-initdb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="first-application" target="1.5" />
+      <module name="first-application-domain" target="1.8" />
+      <module name="first-application-env" target="1.8" />
+      <module name="first-application-initdb" target="1.8" />
+      <module name="first-application-selenium" target="1.8" />
+      <module name="first-application-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

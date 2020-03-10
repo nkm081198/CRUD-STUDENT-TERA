@@ -1,6 +1,7 @@
 package vn.cwa.application.app.student;
 
-import java.util.HashMap;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -17,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import vn.cwa.application.app.model.CstDcAnswerHistory;
 import vn.cwa.application.domain.model.Student;
 import vn.cwa.application.domain.service.student.StudentService;
 
@@ -28,28 +28,30 @@ public class StudentController {
 	@Inject
 	StudentService studentService;
 
-	@ModelAttribute
-	public StudentForm setupForm() {
-		return new StudentForm();
-	}
+//	@ModelAttribute
+//	public StudentForm setupForm() {
+//		return new StudentForm();
+//	}
 
 	@RequestMapping(value = "insert", params = "form", method = RequestMethod.GET)
-	public String createForm() {
+	public String createForm(Model model) {
+		model.addAttribute("studentForm", new StudentForm());
 		return "student/insert";
 	}
 	
 	@RequestMapping(value = "insert", params = "redo", method = RequestMethod.POST)
-	public String createRedo(StudentForm studentForm) {
+	public String createRedo(StudentForm studentForm, Model model) {
+		model.addAttribute("studentForm", studentForm);
 		return "student/insert";
 	}
 
 	@RequestMapping(value = "insert", params = "confirm", method = RequestMethod.POST)
-	public String createConfirm(@Validated StudentForm studentForm, BindingResult result) {
+	public String createConfirm(@Validated StudentForm studentForm, BindingResult result, Model model) {
 
 		if (result.hasErrors()) {
-			return createRedo(studentForm);
+			return createRedo(studentForm, model);
 		}
-
+		model.addAttribute("studentForm", studentForm);
 		Student student = new Student();
 		student.setName(studentForm.getName());
 		student.setAge(studentForm.getAge());

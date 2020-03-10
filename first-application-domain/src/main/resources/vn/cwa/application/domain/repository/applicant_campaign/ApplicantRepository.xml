@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="vn.cwa.application.domain.repository.applicant_campaign.ApplicantRepository">
+
+	<resultMap id="ApplicantResultMap" type="Applicant">
+		<id column="id" property="id" />
+		<result column="cp_id" property="cpId" />
+		<result column="start_date" property="startDate" />
+		<result column="end_date" property="endDate" />
+		<result column="label1_value" property="label1Value" />
+		<result column="label2_value" property="label2Value" />
+		<result column="label3_value" property="label3Value" />
+		<result column="label4_value" property="label4Value" />
+		<result column="label5_value" property="label5Value" />
+		<result column="label6_value" property="label6Value" />
+		<result column="label7_value" property="label7Value" />
+		<result column="label8_value" property="label8Value" />
+		<result column="label9_value" property="label9Value" />
+		<result column="label10_value" property="label10Value" />
+		<result column="label11_value" property="label11Value" />
+		<result column="label12_value" property="label12Value" />
+		<result column="label13_value" property="label13Value" />
+		<result column="label14_value" property="label14Value" />
+		<result column="label15_value" property="label15Value" />
+		<result column="label16_value" property="label16Value" />
+		<result column="label17_value" property="label17Value" />
+		<result column="label18_value" property="label18Value" />
+		<result column="label19_value" property="label19Value" />
+		<result column="label20_value" property="label20Value" />
+		<result column="label21_value" property="label21Value" />
+		<result column="label22_value" property="label22Value" />
+		<result column="label23_value" property="label23Value" />
+		<result column="label24_value" property="label24Value" />
+		<result column="label25_value" property="label25Value" />
+		<result column="label26_value" property="label26Value" />
+		<result column="label27_value" property="label27Value" />
+		<result column="label28_value" property="label28Value" />
+		<result column="label29_value" property="label29Value" />
+		<result column="label30_value" property="label30Value" />
+		<result column="label31_value" property="label31Value" />
+		<result column="label32_value" property="label32Value" />
+		<result column="label33_value" property="label33Value" />
+		<result column="label34_value" property="label34Value" />
+		<result column="label35_value" property="label35Value" />
+		<result column="label36_value" property="label36Value" />
+		<result column="label37_value" property="label37Value" />
+		<result column="label38_value" property="label38Value" />
+		<result column="label39_value" property="label39Value" />
+		<result column="label40_value" property="label40Value" />
+		<result column="label41_value" property="label41Value" />
+		<result column="label42_value" property="label42Value" />
+		<result column="label43_value" property="label43Value" />
+		<result column="label44_value" property="label44Value" />
+		<result column="label45_value" property="label45Value" />
+		<result column="label46_value" property="label46Value" />
+		<result column="label47_value" property="label47Value" />
+		<result column="label48_value" property="label48Value" />
+		<result column="label49_value" property="label49Value" />
+		<result column="label50_value" property="label50Value" />
+
+	</resultMap>
+	
+	<!-- 
+	<select id="getByCamId" resultMap="ApplicantResultMap">
+		SELECT
+		*
+		FROM
+		applicant, campaign
+		WHERE
+		applicant.cp_id =
+		campaign.id
+		AND
+		campaign.id = #{campaignId}
+	</select> -->
+	
+	<select id="getApplicantCsvByCriteria" resultMap="ApplicantResultMap">
+		SELECT
+		*
+		FROM
+		applicant, campaign
+		WHERE
+		applicant.cp_id =
+		campaign.id
+		AND
+		campaign.id = #{criteria.campaignId}
+	</select>
+	
+</mapper>

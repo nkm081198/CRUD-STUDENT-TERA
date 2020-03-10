@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Admin
+Build-Jdk: 1.8.0_242
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: vn.cwa.application
+
